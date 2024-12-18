@@ -1,0 +1,68 @@
+$sidepanel-width: 272px;
+$desktop-sidepanel-columns: 11;
+
+$desktop-columns: 12;
+$desktop-columns-width: 70px;
+$desktop-gutter: 32px;
+
+$tablet-columns: 8;
+$tablet-columns-width: 67px;
+$tablet-gutter: 24px;
+
+$mobile-columns: 4;
+$mobile-columns-width: auto;
+$mobile-gutter: 24px;
+
+$outer-margin: 32px;
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat($desktop-columns, $desktop-columns-width);
+  grid-gap: $desktop-gutter;
+  margin-right: $outer-margin;
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+    // tablet
+    grid-gap: $tablet-gutter;
+    grid-template-columns: repeat($tablet-columns, $tablet-columns-width);
+    margin: 0 $outer-margin;
+  }
+
+  @media (max-width: 767px) {
+    // mobile
+    grid-gap: $mobile-gutter;
+    grid-template-columns: repeat($mobile-columns, $mobile-columns-width);
+    margin: 0;
+  }
+}
+
+.sidepanel {
+  display: grid;
+  height: 100%;
+  grid-template-columns: $sidepanel-width 1fr;
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+    grid-template-columns: auto;
+    grid-template-rows: 74px auto 74px;
+    margin: 0;
+    .sidepanel {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: auto;
+    grid-template-rows: 54px auto 54px;
+    margin: 0;
+    .sidepanel {
+      display: none;
+    }
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 81px auto 81px;
+  max-width: 100%;
+  overflow-x: hidden;
+}

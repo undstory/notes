@@ -1,0 +1,12 @@
+@use "../../../styles//variables" as vars;
+
+.searchbar svg {
+  color: vars.$grey;
+}
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}

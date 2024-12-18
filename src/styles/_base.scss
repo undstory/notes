@@ -1,0 +1,16 @@
+// style bazowe np body html
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}

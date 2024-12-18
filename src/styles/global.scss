@@ -1,0 +1,16 @@
+// style globalne np reset css
+@use "./variables";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: variables.$total-black;
+  color: variables.$total-white;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}

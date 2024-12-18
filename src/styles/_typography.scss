@@ -1,0 +1,65 @@
+@use "sass:map";
+$fonts: (
+  inter: "Inter, sans-serif",
+  noto-serif: "Noto Serif, serif",
+  source-code-pro: "Source Code Pro, monospace",
+);
+
+$font-bold: 700;
+$font-semi-bold: 600;
+$font-medium: 500;
+$font-regular: 400;
+
+$text-presets: (
+  preset-1: (
+    font-size: 24px,
+    font-weight: $font-bold,
+    line-height: 120%,
+    letter-spacing: -0.5px,
+  ),
+  preset-2: (
+    font-size: 20px,
+    font-weight: $font-bold,
+    line-height: 120%,
+    letter-spacing: -0.5px,
+  ),
+  preset-3: (
+    font-size: 16px,
+    font-weight: $font-semi-bold,
+    line-height: 120%,
+    letter-spacing: -0.3px,
+  ),
+  preset-4: (
+    font-size: 14px,
+    font-weight: $font-medium,
+    line-height: 120%,
+    letter-spacing: -0.2px,
+  ),
+  preset-5: (
+    font-size: 14px,
+    font-weight: $font-regular,
+    line-height: 120%,
+    letter-spacing: -0.2px,
+  ),
+  preset-6: (
+    font-size: 12px,
+    font-weight: $font-regular,
+    line-height: 120%,
+    letter-spacing: -0.2px,
+  ),
+);
+
+@function get-font($font-name) {
+  @return map.get($fonts, $font-name);
+}
+
+@function get-preset($preset-name) {
+  @return map.get($text-presets, $preset-name);
+}
+
+@mixin font-preset($preset) {
+  font-size: map.get($preset, size);
+  font-weight: map.get($preset, weight);
+  line-height: map.get($preset, line-height);
+  letter-spacing: map.get($preset, letter-spacing);
+}
