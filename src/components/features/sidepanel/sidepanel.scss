@@ -9,4 +9,12 @@
 .sidepanel-wrapper {
   padding: 12px 16px;
   border-right: 1px solid vars.$almost-black;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1023px) {
+  .sidepanel-content {
+    display: none;
+  }
 }

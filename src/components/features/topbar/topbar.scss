@@ -1,0 +1,24 @@
+@use "../../styles/typography.scss" as typography;
+@use "../../styles/variables.scss" as vars;
+
+.topbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 32px;
+  border-bottom: 1px solid vars.$almost-black;
+}
+
+.topbar-header {
+  font-family: typography.get-font(inter);
+  @include typography.font-preset(typography.get-preset(preset-1));
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-settings {
+  color: vars.$grey;
+}

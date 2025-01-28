@@ -1,0 +1,36 @@
+@use "../../styles/typography.scss" as typography;
+@use "../../styles/variables.scss" as vars;
+
+.input-container {
+  position: relative;
+  width: 300px;
+  input {
+    width: 100%;
+    padding: 10px 10px 10px 38px;
+    font-size: 16px;
+    border: 1px solid vars.$grey-darker;
+    border-radius: 8px;
+    background-color: transparent;
+    color: vars.$total-white;
+  }
+
+  .icon-search {
+    color: vars.$grey;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+
+    path {
+      fill: currentColor;
+    }
+  }
+}
+
+.input-styles::placeholder {
+  color: vars.$grey;
+  font-family: typography.get-font(inter);
+  @include typography.font-preset(typography.get-preset(preset-6));
+}
