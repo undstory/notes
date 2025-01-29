@@ -1,22 +1,20 @@
 import React from "react";
-import "./logo.scss";
-type ButtonProps = {
-  variant: "primary" | "secondary" | "border";
-  disabled: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-};
+import './button.scss';
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant: "primary" | "secondary" | "border" | "nav";
+}
 
 const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   disabled = false,
   children,
   onClick,
+  className
 }) => {
   return (
     <button
-      className=""
-      onClick={onClick}
+      className={`btn-${variant} ${className}`}
       onClick={onClick}
       disabled={disabled}
     >

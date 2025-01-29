@@ -1,5 +1,5 @@
-@use "../../styles/typography.scss" as typography;
-@use "../../styles/variables.scss" as vars;
+@use "../../../styles/typography.scss" as typography;
+@use "../../../styles/variables.scss" as vars;
 
 .heading {
   font-family: typography.get-font(inter);
@@ -13,8 +13,61 @@
   flex-direction: column;
 }
 
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid vars.$almost-black;
+  width: 100%;
+}
+
+.menu-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 8px;
+
+  &.active {
+    background-color: vars.$almost-black;
+    color: vars.$grey-300;
+  }
+}
+
+
+
+
+.icon {
+  color: vars.$grey-300;
+  width: 20px;
+  height: 20px;
+  path {
+    fill: currentColor;
+  }
+}
+
+.active-icon {
+
+    color: vars.$blue;
+    path {
+      fill: currentColor;
+    }
+  }
+
+  .chevron-icon {
+    margin-left: auto;
+    color: vars.$total-white;
+    path {
+      fill: currentColor;
+    }
+  }
+
+
 @media (max-width: 1023px) {
   .sidepanel-content {
     display: none;
   }
 }
+
+

@@ -1,0 +1,43 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixins' as mix;
+@use '../../../styles/typography' as typo;
+
+.btn {
+
+    &-primary {
+
+      @include mix.button-variant(vars.$blue, vars.$total-white, vars.$blue, vars.$blue-dark, vars.$total-white, vars.$blue-dark);
+
+    }
+
+
+
+    &-secondary {
+
+      @include mix.button-variant(vars.$grey-100, vars.$grey-600, vars.$grey-100, vars.$total-white, vars.$total-black, vars.$grey-200);
+
+    }
+
+
+
+    &-border {
+
+      @include mix.button-variant(vars.$total-white, vars.$total-black, vars.$grey-200, vars.$grey-100, vars.$grey-600, vars.$grey-100);
+
+    }
+
+    &-nav {
+
+            background-color: transparent;
+            color: vars.$grey-300;
+            outline: none;
+            padding: 11px;
+            text-align: left;
+            border: none;
+            @include typo.font-preset(typo.get-preset(preset-4));
+            cursor: pointer;
+            border-radius: 8px;
+
+    }
+
+  }

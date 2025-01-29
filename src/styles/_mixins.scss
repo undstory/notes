@@ -1,6 +1,71 @@
+@use './variables' as vars;
+
 // mixiny
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+@mixin button-variant($bg-color, $text-color, $border-color, $hover-bg, $hover-text, $hover-border) {
+
+  background-color: $bg-color;
+
+  color: $text-color;
+
+  border: 2px solid $border-color;
+
+  padding: 10px 20px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+
+  &:hover {
+
+    background-color: $hover-bg;
+
+    color: $hover-text;
+
+    border-color: $hover-border;
+
+  }
+
+
+
+  &:disabled {
+
+    background-color: vars.$grey-100;
+
+    color: vars.$grey-200;
+
+    border-color: vars.$grey-100;;
+
+    cursor: not-allowed;
+
+  }
+
+  &:focus {
+    outline: 3px solid vars.$grey-dark;
+    outline-offset: 2px;
+  }
+
+}
+
+
+
+

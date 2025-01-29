@@ -1,6 +1,6 @@
 import React from "react";
 import "./topbar.scss";
-import { ReactComponent as IconSettingsSvg } from "../../assets/images/icon-settings.svg";
+import { ReactComponent as IconSettingsSvg } from "../../../assets/images/icon-settings.svg";
 import { Searchinput } from "../search-input";
 // import withMediaQuery from "../../hoc/withMediaQuery";
 

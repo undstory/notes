@@ -1,6 +1,6 @@
 import React from "react";
 import "./searchInput.scss";
-import { ReactComponent as IconSearchSvg } from "../../assets/images/icon-search.svg";
+import { ReactComponent as IconSearchSvg } from "../../../assets/images/icon-search.svg";
 
 const Searchinput: React.FC = () => {
   return (
